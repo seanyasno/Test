@@ -8,7 +8,7 @@ const { lowerCase } = require('lodash');
 dotenv.config();
 
 let data;
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
