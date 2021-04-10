@@ -59,6 +59,12 @@ app.get('/data/ratings', async (req, res) => {
     res.json(_.uniq(data.map(item => item.rating).sort()));
 });
 
+app.get('/data/filters', async (req, res) => {
+    const filters = ['type', 'title', 'director', 'country', 'release_year', 'rating', 'duration'];
+
+    res.json(filters);
+});
+
 app.get('/data/filter/:filter/:value', async (req, res) => {
     const {filter = '', value = ''} = req.params;
     const filters = ['type', 'title', 'director', 'country', 'release_year', 'rating', 'duration'];
