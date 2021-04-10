@@ -57,5 +57,4 @@ app.get('/data/categories', async (req, res) => {
 app.listen(PORT, async () => {
     data = await loadCSVFile(__dirname + '/assets/netflix_titles.csv');
     console.log(`Server is up and running at port ${PORT}`);
-    
 });
